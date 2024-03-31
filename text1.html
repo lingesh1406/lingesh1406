@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text</title>
+</head>
+<style>
+
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #000 ;
+    }
+
+    .content{
+        position: relative;
+    }
+
+    .content h1{
+        position: absolute;
+        color: #fff;
+        transform: translate(-50% , -50%);
+        font-size: 5rem;
+    }
+
+    .content h1:nth-child(1){
+        color: transparent;
+        -webkit-text-stroke:.5px rgb(119, 255, 187);
+    }
+
+    .content h1:nth-child(2){
+        color: rgb(119, 255, 187)  ;
+        animation: waterflow 5s ease-in-out infinite;
+    }
+
+    @keyframes waterflow {
+        0%{
+            clip-path: polygon(0 40%, 16% 37%, 31% 40%, 45% 46%, 60% 54%, 76% 54%, 90% 49%, 100% 46%, 100% 98%, 0% 98%, 0% 100%);
+        }
+        50%{
+            clip-path: polygon(0 61%, 19% 63%, 36% 60%, 51% 56%, 62% 48%, 74% 43%, 90% 44%, 100% 55%, 100% 98%, 0% 98%, 0% 100%);
+        }
+
+        100%{
+            clip-path: polygon(0 40%, 16% 37%, 31% 40%, 45% 46%, 60% 54%, 76% 54%, 90% 49%, 100% 46%, 100% 98%, 0% 98%, 0% 100%);
+
+        }
+    }
+</style>
+<body>
+
+    <div class="content">
+        <h1> Lingesh </h1>
+        <h1> Lingesh </h1>
+    </div>
+    
+</body>
+</html>

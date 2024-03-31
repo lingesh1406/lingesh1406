@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Text </title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    body{
+        background-color: teal;
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+        background-color: teal;
+    }
+    h1{
+        position:relative;
+        /* z-index: 1; */
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        color: teal;
+        -webkit-text-stroke: .3px #fff;
+    }
+    h1::before{
+        position: absolute;
+        content: "";
+        /* z-index: -1; */
+        color:rgb(157, 255, 0);
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-text-stroke: .3px #fff;
+    }
+</style>
+<body>
+
+        <h1 data-text="The Lee"> The Lee </h1>
+
+</body>
+</html>
